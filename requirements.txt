@@ -1,0 +1,12 @@
+kagglehub
+jupyter
+torch 
+torchaudio 
+librosa 
+pandas 
+scikit-learn 
+joblib
+panns-inference
+google-cloud-bigquery
+google-cloud-storage
+pytest

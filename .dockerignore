@@ -1,0 +1,13 @@
+Data/
+data/
+venv/
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+.git/
+.gitignore
+.vscode/
+models/
+logs/
+outputs/
+.cache/
