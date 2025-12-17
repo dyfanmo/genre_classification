@@ -1,5 +1,3 @@
-from __future__ import annotations
-
 import argparse
 import json
 import os
@@ -15,8 +13,11 @@ from src.training_pipeline import (
     train_and_evaluate,
 )
 
+
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Vertex AI training entrypoint")
+    parser = argparse.ArgumentParser(
+        description="Vertex AI training entrypoint"
+    )
     parser.add_argument(
         "--data-uri",
         type=str,
@@ -90,9 +91,13 @@ def main() -> None:
     df = load_embeddings_csv(args.data_uri)
 
     if args.balance:
-        df = balance_by_downsampling(df, label_column="genre", random_state=args.random_state)
+        df = balance_by_downsampling(
+            df, label_column="genre", random_state=args.random_state
+        )
 
-    model, metrics = train_and_evaluate(df, test_size=0.2, random_state=args.random_state)
+    model, metrics = train_and_evaluate(
+        df, test_size=0.2, random_state=args.random_state
+    )
 
     model_dir, metric_dir = resolve_vertex_dirs(args.model_dir)
 
