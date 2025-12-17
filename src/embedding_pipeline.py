@@ -6,7 +6,12 @@ import pandas as pd
 import librosa
 from panns_inference import AudioTagging
 
-from src.config import GENRES_DIR, EMBEDDINGS_CSV, SAMPLE_RATE, CLIP_DURATION_SECONDS
+from src.config import (
+    GENRES_DIR,
+    EMBEDDINGS_CSV,
+    SAMPLE_RATE,
+    CLIP_DURATION_SECONDS,
+)
 from src.utils import get_device, ensure_directory
 
 
@@ -52,7 +57,7 @@ def build_embedding_row(
     wav_path: Path,
     embedding: np.ndarray,
 ) -> Dict[str, Any]:
-    
+
     row = {
         "file": f"{genre}/{wav_path.name}",
         "genre": genre,
@@ -79,7 +84,6 @@ def generate_embeddings_dataframe(
         rows.append(row)
 
     return pd.DataFrame(rows)
-
 
 
 def run_embedding_extraction() -> None:
