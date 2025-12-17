@@ -1,54 +1,30 @@
-# -------------------------
-# Large raw datasets (already on GCS)
-# -------------------------
 Data/
 data/raw/
 data/genres_original/
 data/images_original/
 
-# -------------------------
-# Virtual environments
-# -------------------------
 venv/
 .venv/
 
-# -------------------------
-# Python cache
-# -------------------------
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
 
-# -------------------------
-# Jupyter & notebooks
-# -------------------------
 .ipynb_checkpoints/
 notebooks/
 
-# -------------------------
-# Local artifacts & outputs
-# -------------------------
 models/
 logs/
 outputs/
 checkpoints/
 
-# -------------------------
-# OS files
-# -------------------------
 .DS_Store
 Thumbs.db
 
-# -------------------------
-# Git & editor configs
-# -------------------------
 .git/
 .gitignore
 .vscode/
 
-# -------------------------
-# Kaggle & cache
-# -------------------------
 .cache/
 kaggle.json
